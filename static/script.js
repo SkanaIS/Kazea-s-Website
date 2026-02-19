@@ -63,5 +63,5 @@ document.querySelectorAll(".project-item").forEach(item => {
       desc.textContent = texts[index];
       desc.classList.remove("fade-out");
     }, 1000); // 与 CSS transition 时间一致
-  }, 3000); // 每3秒切换一次
+  }, 5000); // 每3秒切换一次
 });
