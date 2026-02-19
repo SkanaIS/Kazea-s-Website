@@ -270,3 +270,10 @@ footer {
   .stroke-path { stroke-width: 5.8; }
   body { padding: 8vw 6vw; }
 }
+.project-desc {
+  transition: opacity 1s ease;
+  opacity: 1;
+}
+.project-desc.fade-out {
+  opacity: 0;
+}

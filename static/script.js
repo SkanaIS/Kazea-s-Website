@@ -47,3 +47,21 @@ document.querySelectorAll('.stroke-path').forEach(path => {
   path.style.strokeDasharray = length;
   path.style.strokeDashoffset = length;
 });
+
+document.querySelectorAll(".project-item").forEach(item => {
+  const texts = JSON.parse(item.dataset.texts);
+  const desc = item.querySelector(".project-desc");
+  let index = 0;
+
+  desc.textContent = texts[0];
+
+  setInterval(() => {
+    desc.classList.add("fade-out");
+
+    setTimeout(() => {
+      index = (index + 1) % texts.length;
+      desc.textContent = texts[index];
+      desc.classList.remove("fade-out");
+    }, 1000); // 与 CSS transition 时间一致
+  }, 3000); // 每3秒切换一次
+});
