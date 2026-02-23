@@ -287,3 +287,12 @@ footer {
 .project-desc.fade-out {
   opacity: 0;
 }
+
+/* EULA page centering */
+body:has(.content-side h2:first-of-type) .content-side {
+  text-align: center;
+}
+body:has(.content-side h2:first-of-type) .content-side ol {
+  text-align: left;
+  display: inline-block;
+}
